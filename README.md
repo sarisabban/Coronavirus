@@ -1,6 +1,8 @@
 # Coronavirus
 Live Coronavirus Tracker
 
+![alt text](example.png "example of output")
+
 ## Description:
 A simple Coronavirus live tracker of global and country cases.
 
