@@ -42,10 +42,10 @@ def Coronavirus(country):
 			else: cases     = cols[1]
 			if cols[3] == '': deaths    = 0
 			else: deaths    = cols[3]
-			if cols[5] == '': active    = 0
-			else: active    = cols[5]
-			if cols[6] == '': recovered = 0
-			else: recovered = cols[6]
+			if cols[6] == '': active    = 0
+			else: active    = cols[6]
+			if cols[5] == '': recovered = 0
+			else: recovered = cols[5]
 	try:
 		out = '''    \033[1;36m{}:\033[0m\n        Total Cases         \033[1;34m{}\033[0m\n        Total Deaths        \033[31m{}\033[0m\n        New Cases           \033[35m{}\033[0m\n        Still Active Cases  \033[33m{}\033[0m\n        Total Recovered     \033[32m{}\033[0m'''\
 		.format(country, cases, deaths, new, active, recovered)
