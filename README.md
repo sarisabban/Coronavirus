@@ -4,10 +4,10 @@ Live Coronavirus Tracker
 ![alt text](Example.png "Example of output")
 
 ## Description:
-A simple Coronavirus live tracker of global and country cases.
+A simple Coronavirus live tracker of global and country wide cases. **Update**: Now the tracker only prints whenever the number of reported cases changes (rather than every 15 minutes); if a country is specified then it will print when the number of cases changes in that country, otherwise it will print when the number of cases changes globally.
 
 ## How to use:
-This is a [Video]() on how to use this setup.
+This is a [Video](https://youtu.be/5eeA_diyZvM) on how to use this setup.
 
 This script works on GNU/Linux Ubuntu 19.10 and over using Python 3.
 
