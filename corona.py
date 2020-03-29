@@ -3,6 +3,7 @@ import bs4
 import time
 import datetime
 from urllib import request
+from urllib.request import Request
 
 logo = '''\033[31m╔═╗┌─┐┬─┐┌─┐┌┐┌┌─┐┬  ┬┬┬─┐┬ ┬┌─┐
 ║  │ │├┬┘│ ││││├─┤└┐┌┘│├┬┘│ │└─┐
@@ -15,7 +16,8 @@ logo = '''\033[31m╔═╗┌─┐┬─┐┌─┐┌┐┌┌─┐┬  ┬
 def Coronavirus(country):
 	''' Tracks the global coronavirus cases and deaths '''
 	# Global Cases
-	URL = 'https://www.worldometers.info/coronavirus/'
+	Head = {'User-Agent': 'Mozilla/5.0'}
+	URL = Request('https://www.worldometers.info/coronavirus/', headers=Head)
 	web = request.urlopen(URL).read().decode('utf8')
 	soup = bs4.BeautifulSoup(web, 'lxml')
 	title = soup.find('title').string
@@ -23,7 +25,7 @@ def Coronavirus(country):
 	Gdeaths = title.split()[6]
 	time = datetime.datetime.now().strftime('%d %B %Y @ %H:%M')
 	# Country Cases
-	URL = 'https://www.worldometers.info/coronavirus/#countries'
+	URL = Request('https://www.worldometers.info/coronavirus/#countries', headers=Head)
 	web = request.urlopen(URL).read().decode('utf8')
 	soup = bs4.BeautifulSoup(web, 'lxml')
 	table = soup.find("table")
